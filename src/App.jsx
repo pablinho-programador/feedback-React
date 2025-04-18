@@ -1,25 +1,29 @@
 import iconStar from "./images/icon-star.svg"
+import illustrationThankYou from "./images/illustration-thank-you.svg"
 import { useState } from "react"
 
 export function App() {
 
   const [notaAvaliacao, setNotaAvaliacao] = useState(0)
-  const [rateNote, setRateNote] = useState(0)
-
 
   function handleAlterarNotaAvaliacao(nota){
-      setNotaAvaliacao(nota)
+    setNotaAvaliacao(nota)
   }
 
   const [submited, setSubmited] = useState(false)
 
-  function handeSubmit () {
-    setSubmited(!submited)
+  function handleSubmit () {
+    if (notaAvaliacao !== 0){
+      setSubmited(!submited)
+      return
+    }
+
+    alert("Please, choose a rate button!")
   }
 
   return (
     <div>
-      {submited === false ? (
+      {submited === false? (
             <div className="bg-gradient-dark mx-6 p-6 max-w-103 rounded-2xl text-white font-overpass">
       
             <div className="bg-dark-blue mb-4 p-4 w-fit rounded-full">
@@ -35,13 +39,15 @@ export function App() {
               <input type="button" value={2} className="bg-dark-blue w-10.5 h-10.5 rounded-full text-sm text-medium-grey leading-2 focus:text-white focus:bg-medium-grey" onClick = {()=> handleAlterarNotaAvaliacao(2)}/>
               <input type="button" value={3} className="bg-dark-blue w-10.5 h-10.5 rounded-full text-sm text-medium-grey leading-2 focus:text-white focus:bg-medium-grey" onClick = {()=> handleAlterarNotaAvaliacao(3)}/>
               <input type="button" value={4} className="bg-dark-blue w-10.5 h-10.5 rounded-full text-sm text-medium-grey leading-2 focus:text-white focus:bg-medium-grey" onClick = {()=> handleAlterarNotaAvaliacao(4)}/>
-              <input type="button" value={5} className="bg-dark-blue w-10.5 h-10.5 rounded-full text-sm text-medium-grey leading-2 focus:text-white focus:bg-medium-grey" onClick = {()=> handleAlterarNotaAvaliacao(5)}/>
+              <input type="button" value={5} className="bg-dark-blue w-10.5 h-10.5 rounded-full text-sm text-medium-grey leading-2 focus:text-white focus:bg-medium-grey"  onClick = {()=> handleAlterarNotaAvaliacao(5)}/>
             </div>
       
-            <button className="bg-orange w-full py-3 uppercase text-sm rounded-3xl tracking-1 font-bold hover:bg-white hover:text-orange" onClick={handeSubmit}>Submit</button>
+            <button className="bg-orange w-full py-3 uppercase text-sm rounded-3xl tracking-1 font-bold hover:bg-white hover:text-orange" onClick={handleSubmit}>Submit</button>
           </div>
       ): (
-        <div className="bg-gradient-dark mx-6 p-6 max-w-103 rounded-2xl text-white font-overpass"> </div>
+        <div className="bg-gradient-dark mx-6 p-6 max-w-103 rounded-2xl text-white font-overpass"> 
+          <img src= {illustrationThankYou} alt="" />
+        </div>
       )}
     </div>
   )
