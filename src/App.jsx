@@ -35,14 +35,14 @@ export function App() {
             <p className="text-light-grey text-sm leading-1 mb-6">Please, let us know how we did with your support request. All feedback is appreciated to help us improve our offering"</p>
       
             <div className="flex justify-between mb-6">
-              <input type="button" value={1} className="bg-dark-blue w-10.5 h-10.5 rounded-full text-sm text-medium-grey leading-2 focus:text-white focus:bg-medium-grey" onClick = {()=> handleAlterarNotaAvaliacao(1)}/>
-              <input type="button" value={2} className="bg-dark-blue w-10.5 h-10.5 rounded-full text-sm text-medium-grey leading-2 focus:text-white focus:bg-medium-grey" onClick = {()=> handleAlterarNotaAvaliacao(2)}/>
-              <input type="button" value={3} className="bg-dark-blue w-10.5 h-10.5 rounded-full text-sm text-medium-grey leading-2 focus:text-white focus:bg-medium-grey" onClick = {()=> handleAlterarNotaAvaliacao(3)}/>
-              <input type="button" value={4} className="bg-dark-blue w-10.5 h-10.5 rounded-full text-sm text-medium-grey leading-2 focus:text-white focus:bg-medium-grey" onClick = {()=> handleAlterarNotaAvaliacao(4)}/>
-              <input type="button" value={5} className="bg-dark-blue w-10.5 h-10.5 rounded-full text-sm text-medium-grey leading-2 focus:text-white focus:bg-medium-grey"  onClick = {()=> handleAlterarNotaAvaliacao(5)}/>
+              <input type="button" value={1} className="bg-dark-blue w-10.5 h-10.5 rounded-full text-sm text-medium-grey leading-2 focus:text-white focus:bg-medium-grey hover:bg-orange hover:text-white cursor-pointer sm:w-13 sm:h-13 transition duration-400" onClick = {()=> handleAlterarNotaAvaliacao(1)}/>
+              <input type="button" value={2} className="bg-dark-blue w-10.5 h-10.5 rounded-full text-sm text-medium-grey leading-2 focus:text-white focus:bg-medium-grey hover:bg-orange hover:text-white cursor-pointer sm:w-13 sm:h-13 transition duration-400" onClick = {()=> handleAlterarNotaAvaliacao(2)}/>
+              <input type="button" value={3} className="bg-dark-blue w-10.5 h-10.5 rounded-full text-sm text-medium-grey leading-2 focus:text-white focus:bg-medium-grey hover:bg-orange hover:text-white cursor-pointer sm:w-13 sm:h-13 transition duration-400" onClick = {()=> handleAlterarNotaAvaliacao(3)}/>
+              <input type="button" value={4} className="bg-dark-blue w-10.5 h-10.5 rounded-full text-sm text-medium-grey leading-2 focus:text-white focus:bg-medium-grey hover:bg-orange hover:text-white cursor-pointer sm:w-13 sm:h-13 transition duration-400" onClick = {()=> handleAlterarNotaAvaliacao(4)}/>
+              <input type="button" value={5} className="bg-dark-blue w-10.5 h-10.5 rounded-full text-sm text-medium-grey leading-2 focus:text-white focus:bg-medium-grey hover:bg-orange hover:text-white cursor-pointer sm:w-13 sm:h-13 transition duration-400" onClick = {()=> handleAlterarNotaAvaliacao(5)}/>
             </div>
       
-            <button className="bg-orange w-full py-3 uppercase text-sm rounded-3xl tracking-1 font-bold hover:bg-white hover:text-orange" onClick={handleSubmit}>Submit</button>
+            <button className="bg-orange w-full py-3 uppercase text-sm rounded-3xl tracking-1 font-bold hover:bg-white hover:text-orange hover:bg-white hover:text-orange cursor-pointer transition duration-400" onClick={handleSubmit}>Submit</button>
           </div>
       ): (
         <div className="bg-gradient-dark mx-6 p-6 max-w-103 rounded-2xl text-white font-overpass text-center"> 
